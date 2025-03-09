@@ -15,9 +15,8 @@ class AuthorService {
 
     def createAuthor(String name ){
         def author = new Author(name:  name) ;
-        if(!author.validate())  throw new ValidationException("Invalid book data", author.errors)
-        author.save(flush: true)
-        return author
+        if(!author.validate())  throw new ValidationException("Invalid author data", author.errors)
+        return author.save(flush: true)
     }
     def serviceMethod() {
 

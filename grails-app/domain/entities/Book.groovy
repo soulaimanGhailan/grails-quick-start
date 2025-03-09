@@ -7,4 +7,9 @@ class Book {
     static constraints = {
         bookName nullable: false, blank: false
     }
+
+    @Override
+    String toString() {
+        return "bookName :" + this.bookName + " , isbn : " + this.ISBN +", id :" + this.id
+    }
 }
