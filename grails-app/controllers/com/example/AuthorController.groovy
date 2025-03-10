@@ -19,6 +19,7 @@ class AuthorController {
     }
     def createAuthor(String name){
        try {
+           print(params.name)
            def author = authorService.createAuthor(name)
            respond(author , status: 200)
        }catch (Exception e){
