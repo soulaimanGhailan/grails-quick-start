@@ -1,18 +1,20 @@
 package com.example
 
+import entities.Book
 import grails.testing.gorm.DomainUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class TestSpec extends Specification implements DomainUnitTest<Test> {
+class TestSpec extends Specification implements ServiceUnitTest<BookService> {
 
     def setup() {
+
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+
+
+
 }

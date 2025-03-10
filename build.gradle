@@ -33,6 +33,9 @@ configurations {
 }
 
 dependencies {
+    testImplementation "org.spockframework:spock-core:2.0-groovy-3.0"
+    testImplementation "org.grails:grails-web-testing-support:2.2.0"
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
@@ -119,7 +122,9 @@ dependencies {
 //        systemProperty 'webdriver.gecko.driver', "${System.getenv('GECKOWEBDRIVER')}/geckodriver"
 //    }
 //}
-
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
 
 assets {
     minifyJs = true
